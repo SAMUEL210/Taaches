@@ -1,20 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
-    <title>Todo App</title>
-
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.7.0/qs.min.js"></script>
+    <title>Taaches</title>
 </head>
 
 <body>
-    <div id="root"></div>
-
-    <script src="script.js"></script>
+    <div class="container">
+        <h1>SE CONNECTER</h1>
+        <form class="formulaire" action="" method="post">
+            <input required type="email" name="email" id="email" placeholder="Email" />
+            <input required type="password" name="mp" id="mp" placeholder="Mot de passe" />
+            <span id="erreur"></span>
+            <input name="valider" id="valider" type="submit" value="Valider" />
+        </form>
+    </div>
 </body>
 
 </html>

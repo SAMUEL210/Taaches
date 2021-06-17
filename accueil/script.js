@@ -11,8 +11,7 @@ class Modele {
     ajouterTaache(taacheText) {
         const taache = {
             id: this.taaches.length > 0 ?
-                this.taaches[this.taaches.length - 1].id + 1 :
-                1,
+                this.taaches[this.taaches.length - 1].id + 1 : 1,
             text: taacheText,
             complete: false,
         };
@@ -21,8 +20,7 @@ class Modele {
 
     editTaache(id, updateTexte) {
         this.taaches = this.taaches.map((tache) =>
-            tache.id === id ?
-            { id: tache.id, text: updateTexte, complete: tache.complete } :
+            tache.id === id ? { id: tache.id, text: updateTexte, complete: tache.complete } :
             tache
         );
     }
@@ -35,8 +33,7 @@ class Modele {
 
     toggleTaache(id) {
         this.taaches = this.taaches.map((tache) =>
-            tache.id === id ?
-            { id: tache.id, text: tache.text, complete: !tache.complete } :
+            tache.id === id ? { id: tache.id, text: tache.text, complete: !tache.complete } :
             tache
         );
     }
@@ -186,9 +183,9 @@ class Vue {
 }
 
 class Controller {
-    constructor(model, view) {
+    constructor(model, vue) {
         this.model = model;
-        this.vue = view;
+        this.vue = vue;
 
         this.onTaacheListeChanged(this.model.taaches);
 
