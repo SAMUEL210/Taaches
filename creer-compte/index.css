@@ -32,6 +32,8 @@ input {
     margin: 0.2rem;
 }
 
+[type="text"]:active,
+[type="text"]:focus,
 [type="email"]:active,
 [type="email"]:focus,
 [type="password"]:active,
@@ -40,6 +42,7 @@ input {
     border: 2px solid #007bff;
 }
 
+[type="text"],
 [type="email"],
 [type="password"],
 [type="submit"] {
@@ -60,15 +63,18 @@ input {
     font-family: 'Cascadia code';
 }
 
-span {
+#erreur {
     color: red;
     font-style: italic;
     font-size: 0.8rem;
     text-align: left;
 }
 
-div {
-    text-align: center;
+#succes {
+    color: green;
+    font-style: italic;
+    font-size: 0.8rem;
+    text-align: left;
 }
 
 a {
